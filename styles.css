@@ -1,4 +1,4 @@
-body {
+.homepage {
     height: 100%;
     max-width: 100%;
     background-color: #021832;
@@ -7,7 +7,7 @@ body {
 }
 
 .nav-link {
-    color: #fff !important;
+    color: #000 !important;
     font-family: "Big Shoulders", sans-serif;
     letter-spacing: 0.3em;
 }
@@ -16,6 +16,8 @@ body {
     transition: 0.3s ease-in-out;
     transform: scale(1.1);  
 }
+
+/*-------HOMEPAGE-------*/ 
 
 .heading {
     position: absolute;
@@ -64,3 +66,68 @@ body {
     font-size: 18px;
     color: #fff;
 }
+
+/*-------PROJECT-------*/ 
+
+.project1 {
+    height: 100%;
+    max-width: 100%;
+    background-color: #d2e1f6;
+    background-image: url("/images/project1-background4.png"); 
+    background-repeat:repeat-x;
+}
+
+.numbers {
+    position: absolute;
+    left: 30px;
+    top: 40%;
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 200;
+}
+
+.first-number {
+    font-size: 56px;
+}
+
+.line {
+    font-size: 60px;
+    font-weight: 100;
+}
+
+.second-number {
+    font-size: 32px;
+    
+}
+
+
+.weather-app-img {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 600px;
+    
+}
+
+.project1-content {
+    position: absolute;
+    left: 800px;
+    top: 35%;
+}
+
+.project1-title {
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 48px;
+}
+
+.order { 
+    opacity: 0.8;
+}
+
+.project1-text {
+    font-family: "Playfair Display", serif;
+    color: #000;
+    font-style: italic;
+    font-size: 16px;
+    width: 90%;
+}
+
