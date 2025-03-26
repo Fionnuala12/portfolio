@@ -1,15 +1,73 @@
-.homepage {
+/*-------BACKGROUND-------*/ 
+.body {
     height: 100%;
     max-width: 100%;
-    background-color: #021832;
-    background-image: url("/images/homepage-background.png"); 
     background-size: 100%;
+    background-repeat:repeat-x;
 }
 
-.nav-link {
+.homepage {
+    background-color: #021832;
+    background-image: url("/images/homepage-background6.png");   
+}
+
+.project1 {
+    background-color: #d2e1f6;
+    background-image: url("/images/project1-background4.png");   
+}
+
+.project2 {
+    background-color: #f7ebf5;
+    background-image: url("/images/project2-background2.png"); 
+ 
+}
+
+.project3 {
+    background-color: #e0f0f3;
+    background-image: url("/images/project3-background2.png"); 
+    
+}
+
+.project4 {
+    background-color: #fdebdb;
+    background-image: url("/images/project4-background2.png"); 
+}
+
+@media screen and (max-width: 700px) {
+    .homepage {
+        background-image: url("images/homepage-mobile-bkg.png");
+    }
+
+    .project1 {
+        background-image:url("/images/project1-mobile-bkg.png");
+    }
+
+    .project2 {
+        background-image:url("/images/project2-mobile-bkg.png");
+    }
+
+    .project3 {
+        background-image:url("/images/project3-mobile-bkg.png");
+    }
+
+    .project4 {
+        background-image:url("/images/project4-mobile-bkg.png");
+    }
+}
+
+
+/*-------NAVBAR-------*/ 
+
+.nav-projects{
     color: #000 !important;
     font-family: "Big Shoulders", sans-serif;
     letter-spacing: 0.3em;
+}
+
+.nav-home {
+    font-family: "Big Shoulders", sans-serif;
+    letter-spacing: 0.3em;
+    color: #fff !important;
 }
 
 .nav-link:hover {
@@ -27,19 +85,19 @@
     transform: translate(-50%, -50%);
 }
 
+.mobile-desktop-img {
+    display: none;
+}
+
 .homepage-intro {
-    position: absolute;
-    left: 50%;
-    width: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    bottom: 105px;
+    margin-top: 30px;
     font-family: "Playfair Display", serif;
     color: #fff;
     font-style: italic;
     font-size: 16px;
     text-align: center;
     line-height: 1.5;
+    max-width: 50%;
 }
 
 .homepage-btn {
@@ -47,7 +105,7 @@
     justify-content: center;
 }
 
-.homepage-btn-img:hover {
+.homepage-btn:hover {
     transition: 0.3s ease-in-out;
     transform: scale(1.1);
 }
@@ -67,22 +125,35 @@
     color: #fff;
 }
 
-/*-------PROJECT-------*/ 
+@media screen and (max-width: 700px) {
+    .homepage-desktop-img { 
+        display: none;
+    }
 
-.project1 {
-    height: 100%;
-    max-width: 100%;
-    background-color: #d2e1f6;
-    background-image: url("/images/project1-background4.png"); 
-    background-repeat:repeat-x;
+    .mobile-desktop-img {
+        display:block;
+        margin: 0 auto;
+    }
+
+    .homepage-intro {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 0px;
+    }
+
+    .homepage-btn {
+        bottom: 0px;
+    }
+  
 }
 
+/*-------PROJECT PAGES-------*/ 
+
 .numbers {
-    position: absolute;
-    left: 30px;
-    top: 40%;
+  position: relative;
     font-family: "Big Shoulders", sans-serif;
     font-weight: 200;
+    right: 70px;
 }
 
 .first-number {
@@ -99,22 +170,20 @@
     
 }
 
+.number-text {
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 200;
 
-.weather-app-img {
-    position: absolute;
-    top: 200px;
-    left: 100px;
-    width: 600px;
+}
+
+.project-img {
+    position: relative;
+    width: 650px;
+    right: 80px;
     
 }
 
-.project1-content {
-    position: absolute;
-    left: 800px;
-    top: 35%;
-}
-
-.project1-title {
+.project-title {
     font-family: "Big Shoulders", sans-serif;
     font-size: 48px;
 }
@@ -123,11 +192,92 @@
     opacity: 0.8;
 }
 
-.project1-text {
+.project-text {
     font-family: "Playfair Display", serif;
     color: #000;
     font-style: italic;
     font-size: 16px;
-    width: 90%;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+.project-btn {
+    position: absolute;
+    text-decoration: none;
+    color: #000;
+    font-family: "Big Shoulders", sans-serif;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0.1em;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    padding: 15px 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: 0.2s ease-in-out;
+}
+
+.project-btn:hover {
+    
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    color: inherit;
+}
+
+.shopify-btn{ 
+    background-color: #93C9F9;
+    
+}
+
+.to-do-list-btn {
+    background-color: #A9DAB8;
+}
+
+.book-blog-btn {
+    background-color: #D5C4E6;
+}
+
+.weather-app-btn {
+    background-color: #E1A69D;
+}
+
+.icon {
+    padding-right: 7px;
+}
+
+@media screen and (max-width: 700px) {
+    .numbers {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        right: 0;
+    }
+
+    .project-img {
+        margin-bottom: 20px;
+        right: 0;
+
+    }
+
+    .project-content {
+        text-align: center;
+    }
+
+    .project-text {
+        margin-bottom: 40px;
+        padding-left: 20px;
+    }
+}
+
+/*-------FOOTER-------*/ 
+
+footer {
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 200;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 8px;
+    background-color: #A9DAB8;
 }
 
