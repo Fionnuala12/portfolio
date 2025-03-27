@@ -1,12 +1,21 @@
 /*-------BACKGROUND-------*/ 
-body {
-    height: 100%;
-    max-width: 100%;
-    background-size: 100%;
-    background-repeat:repeat-x;
-    margin-bottom: 100px;
-    margin-top: 20px;
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
+
+
+
+
+.full-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+
 
 .homepage {
     background-color: #021832;
@@ -26,8 +35,7 @@ body {
 
 .project3 {
     background-color: #e0f0f3;
-    background-image: url("/images/desktop/project3-background2.png"); 
-    
+    background-image: url("/images/desktop/project3-background2.png");  
 }
 
 .project4 {
@@ -72,22 +80,23 @@ body {
 
 /*-------NAVBAR-------*/ 
 
-.nav-projects{
-    color: #000 !important;
-    font-family: "Big Shoulders", sans-serif;
-    letter-spacing: 0.3em;
+.nav-white {
+    color: #fff !important;
 }
 
-.nav-home {
+.nav-link {
     font-family: "Big Shoulders", sans-serif;
-    letter-spacing: 0.3em;
-    color: #fff !important;
+    letter-spacing: 0.12em;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 .nav-link:hover {
     transition: 0.3s ease-in-out;
     transform: scale(1.1);  
 }
+
+
 
 /*-------HOMEPAGE-------*/ 
 
@@ -115,6 +124,11 @@ body {
     max-width: 80%; /* Adjusted for better centering */
     margin-left: auto;
     margin-right: auto;
+    line-height: 2;
+}
+
+a {
+    text-decoration: none;
 }
 
 .homepage-btn {
@@ -145,6 +159,7 @@ body {
     font-size: 18px;
     color: #fff !important;
     margin-bottom: 0;
+    
 }
 
 @media screen and (max-width: 700px) {
@@ -203,13 +218,15 @@ body {
     right: 80px;
 }
 
+.project-order { 
+    font-size: 48px;
+    font-family: "Big Shoulders", sans-serif;
+    opacity: 0.8;
+}
+
 .project-title {
     font-family: "Big Shoulders", sans-serif;
     font-size: 48px;
-}
-
-.order { 
-    opacity: 0.8;
 }
 
 .project-text {
@@ -218,7 +235,7 @@ body {
     font-style: italic;
     font-size: 16px;
     line-height: 2;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .project-btn {
@@ -244,21 +261,7 @@ body {
     color: inherit;
 }
 
-.shopify-btn{ 
-    background-color: #93C9F9; 
-}
 
-.to-do-list-btn {
-    background-color: #A9DAB8;
-}
-
-.book-blog-btn {
-    background-color: #D5C4E6;
-}
-
-.weather-app-btn {
-    background-color: #E1A69D;
-}
 
 .icon {
     padding-right: 7px;
@@ -308,19 +311,20 @@ body {
 .about-h2 {
     font-family: "Playfair Display", serif;
     color: #fff;
-    font-family: "Merriweather", serif;
     font-weight: 200;
     font-style: normal;
     display: inline;
+    font-style: italic;
 }
 
 .about-p {
-    color: #fff;
     font-family: "Playfair Display", serif;
-    font-weight: 200;
-    font-style: normal;
-    line-height: 2em;
+    color: #fff;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 2;
     font-size: 20px;
+
 }
 
 /*-------CONTACT PAGE-------*/ 
