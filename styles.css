@@ -1,57 +1,71 @@
 /*-------BACKGROUND-------*/ 
-.body {
+body {
     height: 100%;
     max-width: 100%;
     background-size: 100%;
     background-repeat:repeat-x;
+    margin-bottom: 100px;
+    margin-top: 20px;
 }
 
 .homepage {
     background-color: #021832;
-    background-image: url("/images/homepage-background6.png");   
+    background-image: url("/images/desktop/homepage-background6.png");   
 }
 
 .project1 {
     background-color: #d2e1f6;
-    background-image: url("/images/project1-background4.png");   
+    background-image: url("/images/desktop/project1-background4.png");   
 }
 
 .project2 {
     background-color: #f7ebf5;
-    background-image: url("/images/project2-background2.png"); 
+    background-image: url("/images/desktop/project2-background2.png"); 
  
 }
 
 .project3 {
     background-color: #e0f0f3;
-    background-image: url("/images/project3-background2.png"); 
+    background-image: url("/images/desktop/project3-background2.png"); 
     
 }
 
 .project4 {
     background-color: #fdebdb;
-    background-image: url("/images/project4-background2.png"); 
+    background-image: url("/images/desktop/project4-background2.png"); 
 }
+
+.contact {
+    background-color: #021832;
+    background-image: url("images/desktop/about-background.png"); 
+}
+
+
 
 @media screen and (max-width: 700px) {
     .homepage {
-        background-image: url("images/homepage-mobile-bkg.png");
+        background-image: url("images/mobile/homepage-mobile-bkg.png");
     }
 
     .project1 {
-        background-image:url("/images/project1-mobile-bkg.png");
+        background-image:url("/images/mobile/project1-mobile-bkg.png");
     }
 
     .project2 {
-        background-image:url("/images/project2-mobile-bkg.png");
+        background-image:url("/images/mobile/project2-mobile-bkg.png");
     }
 
     .project3 {
-        background-image:url("/images/project3-mobile-bkg.png");
+        background-image:url("/images/mobile/project3-mobile-bkg.png");
     }
 
     .project4 {
-        background-image:url("/images/project4-mobile-bkg.png");
+        background-image:url("/images/mobile/project4-mobile-bkg.png");
+    }
+
+    .contact {
+        background-color: #021832;
+        background-image: url("images/mobile/homepage-mobile-bkg.png"); 
     }
 }
 
@@ -78,11 +92,12 @@
 /*-------HOMEPAGE-------*/ 
 
 .heading {
-    position: absolute;
+    position:absolute;
     top: 50%;
     left: 50%;
-    margin-right: -50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
 }
 
 .mobile-desktop-img {
@@ -97,35 +112,43 @@
     font-size: 16px;
     text-align: center;
     line-height: 1.5;
-    max-width: 50%;
+    max-width: 80%; /* Adjusted for better centering */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .homepage-btn {
-    display: flex;
+    position: absolute;
+    bottom: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
     justify-content: center;
+    text-align: center; 
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    transition: 0.3s ease-in-out;
 }
 
 .homepage-btn:hover {
-    transition: 0.3s ease-in-out;
     transform: scale(1.1);
 }
 
 .homepage-btn-img{
-    position: absolute;
-    bottom: 20px;
     width: 40px;
 }
 
 .homepage-btn-txt {
-    position: absolute;
-    bottom: 90px;
     font-family: "Big Shoulders", sans-serif;
     font-weight: 300;
     font-size: 18px;
-    color: #fff;
+    color: #fff !important;
+    margin-bottom: 0;
 }
 
 @media screen and (max-width: 700px) {
+    
     .homepage-desktop-img { 
         display: none;
     }
@@ -167,20 +190,17 @@
 
 .second-number {
     font-size: 32px;
-    
 }
 
 .number-text {
     font-family: "Big Shoulders", sans-serif;
     font-weight: 200;
-
 }
 
 .project-img {
     position: relative;
     width: 650px;
     right: 80px;
-    
 }
 
 .project-title {
@@ -218,7 +238,6 @@
 }
 
 .project-btn:hover {
-    
     transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
@@ -226,8 +245,7 @@
 }
 
 .shopify-btn{ 
-    background-color: #93C9F9;
-    
+    background-color: #93C9F9; 
 }
 
 .to-do-list-btn {
@@ -256,7 +274,6 @@
     .project-img {
         margin-bottom: 20px;
         right: 0;
-
     }
 
     .project-content {
@@ -268,6 +285,110 @@
         padding-left: 20px;
     }
 }
+
+/*-------ABOUT PAGE-------*/ 
+
+.about-content {
+   position: relative;
+   top: 200px;
+}
+
+.about-h1 {
+    padding-left: 5px;
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    background-image: linear-gradient(#ffc3ca, #a8a9e7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+}
+
+.about-h2 {
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-family: "Merriweather", serif;
+    font-weight: 200;
+    font-style: normal;
+    display: inline;
+}
+
+.about-p {
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 2em;
+    font-size: 20px;
+}
+
+/*-------CONTACT PAGE-------*/ 
+
+.content-container{
+    padding-top: 100px;
+}
+
+.contact-h1 {
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    background-image: linear-gradient(#ffc3ca, #a8a9e7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-h2 {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    height: 100%; 
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    background-image: linear-gradient(#ffc3ca, #a8a9e7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contact-headings {
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    background-image: linear-gradient(#ffc3ca, #a8a9e7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 20px;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.contact-link:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 700px){
+    .contact-h1 {
+        background-image: linear-gradient(#fff, #fff);
+    }
+}
+
 
 /*-------FOOTER-------*/ 
 
