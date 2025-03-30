@@ -239,10 +239,17 @@ a {
     }
 
     .homepage-btn {
-        bottom: 0px;
+        position: absolute;
         margin-top: 30px;
+        bottom: 0;
+        top: unset;
+        margin-top: 20px; /* Add space between button and text */
+        padding-bottom: 40px;
     }
   
+    .homepage {
+        padding-bottom: 80px; /* Ensure enough space for button */
+    }
 }
 
 /*-------PROJECT PAGES-------*/ 
