@@ -49,7 +49,7 @@ html {
     .full-page {
         flex-direction: column; /* Stack elements vertically */
         align-items: flex-start;
-        padding: 50px 0; /* More padding to prevent overlap */
+        padding: 30px 0; /* More padding to prevent overlap */
     }
     .row {
         flex-direction: column;
@@ -121,7 +121,7 @@ html {
 
     .contact {
         background-color: #021832;
-        background-image: url("images/mobile/homepage-mobile-bkg.png"); 
+        background-image: url("images/mobile/about-mobile-bkg.png"); 
     }
 
     .about {
@@ -240,6 +240,7 @@ a {
 
     .homepage-btn {
         bottom: 0px;
+        margin-top: 30px;
     }
   
 }
@@ -431,6 +432,7 @@ a {
         text-align: center;
         margin-top: 50px;
         padding: 10px;
+        width: 100%;
     }
 
     .about-h1 {
