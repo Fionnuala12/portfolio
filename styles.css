@@ -160,14 +160,28 @@ html {
 
 /*-------HOMEPAGE-------*/ 
 
-.heading {
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     text-align: center;
-    width: 100%;
+    position: relative;
+    padding: 40px 20px;
 }
+
+.heading {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
 
 .mobile-desktop-img {
     display: none;
@@ -180,7 +194,7 @@ html {
     font-size: 16px;
     text-align: center;
     line-height: 1.5;
-    max-width: 80%;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     line-height: 2;
@@ -191,13 +205,10 @@ a {
 }
 
 .homepage-btn {
-    position: absolute;
-    bottom: 10px;
-    display:flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    text-align: center; 
+    position: relative; 
+    top: 50px;/* Remove absolute positioning */
+    padding: 15px;
+    bottom: auto; /* Reset bottom positioning */
     cursor: pointer;
     background: transparent;
     border: none;
@@ -221,6 +232,12 @@ a {
     
 }
 
+@media screen and (min-width: 1024px) {
+    .homepage {
+        padding-top: 120px; 
+    }
+}
+
 @media screen and (max-width: 700px) {
     
     .homepage-desktop-img { 
@@ -230,25 +247,22 @@ a {
     .mobile-desktop-img {
         display:block;
         margin: 0 auto;
+        margin-top: 50px;
     }
 
+   
     .homepage-intro {
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-top: 0px;
+        padding: 10px;
+        margin-top: 10px; /* Push text slightly up */
     }
 
     .homepage-btn {
-        position: absolute;
-        margin-top: 30px;
-        bottom: 0;
-        top: unset;
-        margin-top: 20px; /* Add space between button and text */
-        padding-bottom: 40px;
+        padding-bottom: 20px;
+        margin-top: 50px;
     }
   
     .homepage {
-        padding-bottom: 80px; /* Ensure enough space for button */
+        padding-bottom: 20px; /* Ensure enough space for button */
     }
 }
 
