@@ -1,36 +1,79 @@
-/*-------BACKGROUND-------*/ 
-html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+:root {
+    --heading-font: "Big Shoulders", sans-serif;
+    --default-font: "Playfair Display", serif;
+    --background-color: #021832;
+    --linear-gradient:linear-gradient(#ffc3ca, #a8a9e7);
+}
+
+h1, h2, a, .nav-link, .navbar-brand {
+    font-family: var(--heading-font);
+    letter-spacing: 0.12em;
+}
+
+.homepage, .project1, .project2, .project3, .project4, .about, .contact {
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: cover; 
+    min-height: 100vh; 
+    width: 100%;
 }
 
 
+/*-------BACKGROUND-------*/ 
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overscroll-behavior: contain;
+}
 
 
 .full-page {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+.project-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    .full-page {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start;
+        padding: 50px 0; /* More padding to prevent overlap */
+    }
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .col-md-5, .col-md-2 {
+        width: 100%; /* Make sure each section takes full width */
+    }
 }
 
 
-
 .homepage {
-    background-color: #021832;
+    background-color: var(--background-color);
     background-image: url("/images/desktop/homepage-background6.png");   
 }
 
 .project1 {
     background-color: #d2e1f6;
-    background-image: url("/images/desktop/project1-background4.png");   
+    background-image: url("/images/desktop/project1-background4.png");
 }
 
 .project2 {
     background-color: #f7ebf5;
     background-image: url("/images/desktop/project2-background2.png"); 
- 
 }
 
 .project3 {
@@ -43,8 +86,13 @@ html {
     background-image: url("/images/desktop/project4-background2.png"); 
 }
 
+.about {
+    background-color: var(--background-color);
+    background-image: url("images/desktop/about-background.png"); 
+}
+
 .contact {
-    background-color: #021832;
+    background-color: var(--background-color);
     background-image: url("images/desktop/about-background.png"); 
 }
 
@@ -75,6 +123,11 @@ html {
         background-color: #021832;
         background-image: url("images/mobile/homepage-mobile-bkg.png"); 
     }
+
+    .about {
+        background-color: #021832;
+        background-image: url("images/mobile/about-mobile-bkg.png");
+    }
 }
 
 
@@ -85,8 +138,7 @@ html {
 }
 
 .nav-link {
-    font-family: "Big Shoulders", sans-serif;
-    letter-spacing: 0.12em;
+    font-family: var(--heading-font);
     font-weight: 400;
     font-size: 18px;
 }
@@ -96,6 +148,14 @@ html {
     transform: scale(1.1);  
 }
 
+.navbar-brand {
+    font-family: var(--heading-font);
+    background-image: var(--linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    font-weight: 400;
+}
 
 
 /*-------HOMEPAGE-------*/ 
@@ -115,13 +175,12 @@ html {
 
 .homepage-intro {
     margin-top: 30px;
-    font-family: "Playfair Display", serif;
+    font-family: var(--default-font);
     color: #fff;
-    font-style: italic;
     font-size: 16px;
     text-align: center;
     line-height: 1.5;
-    max-width: 80%; /* Adjusted for better centering */
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     line-height: 2;
@@ -143,6 +202,7 @@ a {
     background: transparent;
     border: none;
     transition: 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
 
 .homepage-btn:hover {
@@ -154,7 +214,6 @@ a {
 }
 
 .homepage-btn-txt {
-    font-family: "Big Shoulders", sans-serif;
     font-weight: 300;
     font-size: 18px;
     color: #fff !important;
@@ -188,8 +247,8 @@ a {
 /*-------PROJECT PAGES-------*/ 
 
 .numbers {
-  position: relative;
-    font-family: "Big Shoulders", sans-serif;
+    position: relative;
+    font-family: var(--heading-font);
     font-weight: 200;
     right: 70px;
 }
@@ -208,7 +267,7 @@ a {
 }
 
 .number-text {
-    font-family: "Big Shoulders", sans-serif;
+    font-family: var(--heading-font);
     font-weight: 200;
 }
 
@@ -218,31 +277,34 @@ a {
     right: 80px;
 }
 
+.project-content {
+    margin: auto;
+    padding-top: 30px;
+}
+
 .project-order { 
     font-size: 48px;
-    font-family: "Big Shoulders", sans-serif;
     opacity: 0.8;
 }
 
 .project-title {
-    font-family: "Big Shoulders", sans-serif;
     font-size: 48px;
 }
 
 .project-text {
-    font-family: "Playfair Display", serif;
+    font-family: var(--default-font) !important;
     color: #000;
-    font-style: italic;
     font-size: 16px;
     line-height: 2;
     margin-top: 10px;
 }
 
 .project-btn {
-    position: absolute;
+    position: relative;
+    display: inline-block;
     text-decoration: none;
-    color: #000;
-    font-family: "Big Shoulders", sans-serif;
+    color: #fff;
+    background-color: #000;
     border-radius: 10px;
     font-size: 18px;
     line-height: 1.1;
@@ -258,10 +320,8 @@ a {
     transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
-    color: inherit;
+    color: #fff;
 }
-
-
 
 .icon {
     padding-right: 7px;
@@ -287,45 +347,100 @@ a {
         margin-bottom: 40px;
         padding-left: 20px;
     }
+
+    .project-btn {
+        margin-bottom: 20px;
+    }
 }
+
 
 /*-------ABOUT PAGE-------*/ 
 
+.about-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Make it take the full height of the screen */
+    width: 100%;
+    margin-top: 30px;
+}
+
 .about-content {
-   position: relative;
-   top: 200px;
+    max-width: 1000px;
+    width: 60%;
+    text-align: left;
+    margin: auto;
+    padding: 40px;
+   
 }
 
 .about-h1 {
     padding-left: 5px;
-    font-family: "Big Shoulders", sans-serif;
     font-size: 56px;
     font-weight: 400;
-    letter-spacing: 0.12em;
-    background-image: linear-gradient(#ffc3ca, #a8a9e7);
+    background-image: var(--linear-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline;
 }
 
-.about-h2 {
-    font-family: "Playfair Display", serif;
+.about-h3 {
+    font-family: var(--default-font);
     color: #fff;
     font-weight: 200;
     font-style: normal;
     display: inline;
-    font-style: italic;
+  
 }
 
 .about-p {
-    font-family: "Playfair Display", serif;
+    font-family: var(--default-font);
     color: #fff;
-    font-style: italic;
+    font-style: none;
     font-size: 16px;
     line-height: 2;
     font-size: 20px;
-
 }
+
+.about-btn {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--background-color);
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0.1em;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    padding: 15px 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: 0.2s ease-in-out;
+}
+
+.about-btn:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    color: #021832;
+}
+
+@media screen and (max-width: 700px) {
+    .about-content {
+        text-align: center;
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    .about-h1 {
+        display: block;
+    }
+}
+
+
+
+
 
 /*-------CONTACT PAGE-------*/ 
 
@@ -334,11 +449,9 @@ a {
 }
 
 .contact-h1 {
-    font-family: "Big Shoulders", sans-serif;
     font-size: 64px;
     font-weight: 400;
-    letter-spacing: 0.12em;
-    background-image: linear-gradient(#ffc3ca, #a8a9e7);
+    background-image: var(--linear-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -349,11 +462,9 @@ a {
     justify-content: center;
     text-align: center; 
     height: 100%; 
-    font-family: "Big Shoulders", sans-serif;
     font-size: 56px;
     font-weight: 400;
-    letter-spacing: 0.12em;
-    background-image: linear-gradient(#ffc3ca, #a8a9e7);
+    background-image: var(--linear-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -368,10 +479,10 @@ a {
 }
 
 .contact-headings {
-    font-family: "Big Shoulders", sans-serif;
+    font-family: var(--heading-font);
     font-weight: 400;
     letter-spacing: 0.12em;
-    background-image: linear-gradient(#ffc3ca, #a8a9e7);
+    background-image: var(--linear-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-top: 20px;
@@ -393,16 +504,11 @@ a {
     }
 }
 
-
-/*-------FOOTER-------*/ 
-
-footer {
-    font-family: "Big Shoulders", sans-serif;
-    font-weight: 200;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    padding: 8px;
-    background-color: #A9DAB8;
+@media screen and (min-width: 1200px){
+    .content-container {
+       
+    }
 }
+
+
 
