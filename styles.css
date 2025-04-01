@@ -380,8 +380,13 @@ a {
         padding-left: 20px;
     }
 
+    .github-btn {
+        margin-right: 0;
+    }
+
     .project-btn {
         margin-bottom: 0px;
+        margin-left: 30px;
     }
 }
 
