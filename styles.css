@@ -10,7 +10,7 @@ h1, h2, a, .nav-link, .navbar-brand {
     letter-spacing: 0.12em;
 }
 
-.homepage, .project1, .project2, .project3, .project4, .about, .contact {
+.homepage, .project1, .project2, .project3, .project4, .project5, .about, .contact {
     background-repeat: no-repeat;
     background-position: center center; 
     background-size: cover; 
@@ -92,6 +92,11 @@ html {
     background-image: url("/images/desktop/project4-background2.png"); 
 }
 
+.project5 {
+    background-color: #FDF9DB;
+    background-image: url("/images/desktop/project5-background2.png");
+}
+
 .about {
     background-color: var(--background-color);
     background-image: url("images/desktop/about-background.png"); 
@@ -123,6 +128,10 @@ html {
 
     .project4 {
         background-image:url("/images/mobile/project4-mobile-bkg.png");
+    }
+
+    .project5 {
+        background-image: url("/images/mobile/project5-mobile-bkg.png");
     }
 
     .contact {
@@ -186,8 +195,6 @@ html {
     align-items: center;
     text-align: center;
 }
-
-
 
 .mobile-desktop-img {
     display: none;
@@ -264,7 +271,7 @@ a {
 
     .homepage-btn {
         padding-bottom: 20px;
-        margin-top: 50px;
+        margin-top: 0px;
     }
   
     .homepage {
@@ -301,7 +308,7 @@ a {
 
 .project-img {
     position: relative;
-    width: 650px;
+    width: 700px;
     right: 80px;
 }
 
